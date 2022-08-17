@@ -17,4 +17,4 @@ def exp_growth(ticker: str):
     return get_expected_growth(ticker)
 
 
-app.run()
+app.run(host='0.0.0.0')

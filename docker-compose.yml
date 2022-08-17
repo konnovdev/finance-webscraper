@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  finances_scraper:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped
+    ports:
+      - "5555:5000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
